@@ -44,7 +44,10 @@ public class StringExamples {
         String s = message;
         System.out.println(s.substring(10, 15));        // "SCI  "
 
-        System.out.println(s.substring(11));
+        String s2 = message.substring(10);  // starts at index 10 and goes to the end
+
+        // last 3 characters of a string
+        String lastThree = message.substring(message.length()-3);   // if length is 20 then 20-3 is 17
 
 
     }
