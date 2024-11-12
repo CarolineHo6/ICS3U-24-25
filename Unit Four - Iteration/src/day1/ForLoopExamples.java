@@ -36,5 +36,12 @@ public class ForLoopExamples {
             }
         }
         System.out.println("There are " + numVowels + " vowels in " + str);
+
+
+        String stri = "Alphabet Soup";
+
+        for (int k = stri.length()-1; k >= 0; k--) {
+            System.out.print(stri.substring(k, k+1));
+        }
     }
 }
