@@ -2,12 +2,12 @@ package day2;
 
 public class NestedForLoops {
     public static void main(String[] args) {
-        //exampleOne();
-        //createBox(5,5);
-        //createTriangle();
-        //int height = 8;
-        //createTriangle(height);
-        //backTriangle(5);
+        // exampleOne();
+        // createBox(5,5);
+        // createTriangle();
+        // int height = 8;
+        // createTriangle(height);
+        // backTriangle(5);
         createEmptyBox(5, 10);
     }
 
