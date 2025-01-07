@@ -4,7 +4,17 @@ public class ArrayExamples {
     public static void main(String[] args) {
         // exampleOne();
         // exampleTwo();
-        exampleThree();
+        // exampleThree();
+
+        int[] arr = {1, 2, 4, 0, 3};
+
+        for (int i : arr) {
+            System.out.println(i);
+        }
+        System.out.println();
+        for (int i = 0; i < arr.length; i++) {
+            
+        }
     }
 
     private static void exampleThree() {
