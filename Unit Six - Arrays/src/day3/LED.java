@@ -1,22 +1,22 @@
 package day3;
 
 public class LED {
+    // Constant array representing available colours
+    public static final String[] AVAILABLE_COLOURS = {"RED", "GREEN", "BLUE", "YELLOW"};
 
-    // Attributes
+    // Attributes of the LED class
     private boolean isOn;
     private String colour;
 
-    // Constant array of available colours
-    public static final String[] AVAILABLE_COLOURS = {"RED", "GREEN", "BLUE", "YELLOW"};
-
-    // Constructor
+    // Constructor to set the colour and set isOn to false
     public LED(String colour) {
+        // Check if the colour is valid
         if (isValidColour(colour)) {
-            this.colour = colour.toUpperCase();
+            this.colour = colour;
+            this.isOn = false;
         } else {
-            throw new IllegalArgumentException("Invalid colour. Available colours are: RED, GREEN, BLUE, YELLOW.");
+            throw new IllegalArgumentException("Invalid colour");
         }
-        this.isOn = false;
     }
 
     // Getter for isOn
@@ -36,46 +36,38 @@ public class LED {
 
     // Setter for colour
     public void setColour(String colour) {
+        // Check if the colour is valid
         if (isValidColour(colour)) {
-            this.colour = colour.toUpperCase();
+            this.colour = colour;
         } else {
-            throw new IllegalArgumentException("Invalid colour. Available colours are: RED, GREEN, BLUE, YELLOW.");
+            throw new IllegalArgumentException("Invalid colour");
         }
     }
 
-    // Method to display the colour of the light if it is on
-    public String displayColour() {
+    // Method to display the colour if the light is on
+    public void displayColour() {
         if (isOn) {
-            if ("RED".equals(colour)) {
-                return "R";
-            } else if ("GREEN".equals(colour)) {
-                return "G";
-            } else if ("BLUE".equals(colour)) {
-                return "B";
-            } else if ("YELLOW".equals(colour)) {
-                return "Y";
+            if (colour.equalsIgnoreCase("RED")) {
+                System.out.print("R");
+            } else if (colour.equalsIgnoreCase("GREEN")) {
+                System.out.print("G");
+            } else if (colour.equalsIgnoreCase("BLUE")) {
+                System.out.print("B");
+            } else if (colour.equalsIgnoreCase("YELLOW")) {
+                System.out.print("Y");
             }
+        } else {
+            System.out.print(" "); // Blank (space) if the light is off
         }
-        return ""; // Blank if off or invalid
     }
 
-    // Private helper method to validate if a colour is available
+    // Helper method to validate the colour
     private boolean isValidColour(String colour) {
-        for (String c : AVAILABLE_COLOURS) {
-            if (c.equalsIgnoreCase(colour)) {
+        for (String availableColour : AVAILABLE_COLOURS) {
+            if (availableColour.equalsIgnoreCase(colour)) {
                 return true;
             }
         }
         return false;
-    }
-
-    // Main method for testing (Optional)
-    public static void main(String[] args) {
-        LED led = new LED("RED");
-        System.out.println("Initial state: " + led.displayColour()); // Should display blank
-        led.setOn(true);
-        System.out.println("After turning on: " + led.displayColour()); // Should display R
-        led.setColour("GREEN");
-        System.out.println("After changing to GREEN: " + led.displayColour()); // Should display G
     }
 }
