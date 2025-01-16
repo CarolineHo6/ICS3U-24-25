@@ -8,5 +8,7 @@ public class LEDStripClient {
             strip.display();
             System.out.println();
         }
+
+        LEDStrip hi = new LEDStrip("green", 5);
     }
 }
