@@ -4,18 +4,46 @@ public class Arrays2DExample_v2 {
     public static void main(String[] args) {
         int[][] nums = new int[5][3];
         populate2DArray(nums);
-
         print2DArray(nums);
         System.out.println();
-        System.out.println();
+        // System.out.println();
 
-        print1DArray(nums[0]);
+        // print1DArray(nums[0]);
+
+        int[] sumRow = arrRowSum(nums);
+        print1DArray(sumRow);
+
+        System.out.println("");
+
+        int sum = sumCol(nums, 1);
+
+        System.out.println(sum);
+    }
+
+    private static int sumCol(int[][] arr2D, int col) {
+        int sum = 0;
+        for (int[] row : arr2D) {
+            sum += row[col];
+        }
+
+        return sum;
+    }
+
+    private static int[] arrRowSum(int[][] arr2D) {
+        int[] result = new int[arr2D.length];
+
+        for (int i = 0; i < arr2D.length; i++) {
+            for (int j = 0; j < arr2D[i].length; j++) {
+                result[i] += arr2D[i][j];
+            }
+        }
+        return result;
     }
 
     private static void populate2DArray(int[][] arr2D) {
         for (int i = 0; i < arr2D.length; i++) {
             for (int j = 0; j < arr2D[i].length; j++) {
-                arr2D[i][j] = (int)((Math.random() * 10) + 1);
+                arr2D[i][j] = (int) ((Math.random() * 10) + 1);
             }
         }
     }
