@@ -18,6 +18,17 @@ public class Arrays2DExample_v2 {
         int sum = sumCol(nums, 1);
 
         System.out.println(sum);
+
+        int[] sumCols = arrrColSUm(nums);
+        print1DArray(sumCols);;
+    }
+
+    private static int[] arrrColSUm(int[][] arr2D) {
+        int[] result = new int[arr2D[0].length];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = sumCol(arr2D, i);
+        }
+        return result;
     }
 
     private static int sumCol(int[][] arr2D, int col) {
