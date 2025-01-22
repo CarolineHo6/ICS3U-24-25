@@ -3,14 +3,21 @@ package day5;
 public class Arrays2DExample_v2 {
     public static void main(String[] args) {
         int[][] nums = new int[5][3];
-
-        nums[2] = new int[7];
+        populate2DArray(nums);
 
         print2DArray(nums);
         System.out.println();
         System.out.println();
 
         print1DArray(nums[0]);
+    }
+
+    private static void populate2DArray(int[][] arr2D) {
+        for (int i = 0; i < arr2D.length; i++) {
+            for (int j = 0; j < arr2D[i].length; j++) {
+                arr2D[i][j] = (int)((Math.random() * 10) + 1);
+            }
+        }
     }
 
     private static void print1DArray(int[] arr) {
@@ -21,10 +28,10 @@ public class Arrays2DExample_v2 {
 
     private static void print2DArray(int[][] arr2D) {
         // for (int i = 0; i < arr2D.length; i++) {
-        //     System.out.println();
-        //     for (int el : arr2D[i]) {
-        //         System.out.print(el + " ");
-        //     }
+        // System.out.println();
+        // for (int el : arr2D[i]) {
+        // System.out.print(el + " ");
+        // }
         // }
 
         for (int[] row : arr2D) {
