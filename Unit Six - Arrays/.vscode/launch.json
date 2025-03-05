@@ -1,0 +1,98 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Practice",
+            "request": "launch",
+            "mainClass": "searching.Practice",
+            "projectName": "Unit Six - Arrays_70430d56"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Example",
+            "request": "launch",
+            "mainClass": "arrayLists.Example",
+            "projectName": "Unit Six - Arrays_70430d56"
+        },
+        {
+            "type": "java",
+            "name": "ListExamples",
+            "request": "launch",
+            "mainClass": "arrayLists.ListExamples",
+            "projectName": "Unit Six - Arrays_70430d56"
+        },
+        {
+            "type": "java",
+            "name": "ArrayExamples",
+            "request": "launch",
+            "mainClass": "day1.ArrayExamples",
+            "projectName": "Unit Six - Arrays_70430d56"
+        },
+        {
+            "type": "java",
+            "name": "LEDStripClient",
+            "request": "launch",
+            "mainClass": "day3.LEDStripClient",
+            "projectName": "Unit Six - Arrays_70430d56"
+        },
+        {
+            "type": "java",
+            "name": "LEDs",
+            "request": "launch",
+            "mainClass": "day3.LEDs",
+            "projectName": "Unit Six - Arrays_70430d56"
+        },
+        {
+            "type": "java",
+            "name": "Arrays2DExample_v2",
+            "request": "launch",
+            "mainClass": "day5.Arrays2DExample_v2",
+            "projectName": "Unit Six - Arrays_70430d56"
+        },
+        {
+            "type": "java",
+            "name": "SearchingAlgorithms",
+            "request": "launch",
+            "mainClass": "searching.SearchingAlgorithms",
+            "projectName": "Unit Six - Arrays_70430d56"
+        },
+        {
+            "type": "java",
+            "name": "InsertionSortB",
+            "request": "launch",
+            "mainClass": "sorting.InsertionSortB",
+            "projectName": "Unit Six - Arrays_70430d56"
+        },
+        {
+            "type": "java",
+            "name": "QuickSort",
+            "request": "launch",
+            "mainClass": "sorting.QuickSort",
+            "projectName": "Unit Six - Arrays_70430d56"
+        },
+        {
+            "type": "java",
+            "name": "SelectionSortB",
+            "request": "launch",
+            "mainClass": "sorting.SelectionSortB",
+            "projectName": "Unit Six - Arrays_70430d56"
+        },
+        {
+            "type": "java",
+            "name": "WarmUpB",
+            "request": "launch",
+            "mainClass": "sorting.WarmUpB",
+            "projectName": "Unit Six - Arrays_70430d56"
+        }
+    ]
+}
