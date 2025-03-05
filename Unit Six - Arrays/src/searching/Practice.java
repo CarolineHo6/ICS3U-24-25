@@ -28,7 +28,7 @@ public class Practice {
         for (int i = 1; i < num.length; i++) {
             int temp = num[i];
             int j = i;
-            while (j >= 0 && num[j - 1] > temp) {
+            while (j > 0 && num[j - 1] > temp) {
                 num[j] = num[j - 1];
                 j--;
             }
