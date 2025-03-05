@@ -24,21 +24,6 @@ public class Practice {
         System.out.println(binarySearch(arr, 18, 0, arr.length));
     }
 
-    private static void selectionSort(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            int min = 0;
-            for (int j = 0; j < arr.length; j++) {
-                if (arr[j] > arr[min]) {
-                    min = j;
-                }
-            }
-
-            int temp = arr[i];
-            arr[i] = arr[min];
-            arr[min] = temp;
-        }
-    }
-
     private static void insertionSort(int[] num) {
         for (int i = 1; i < num.length; i++) {
             int temp = num[i];
@@ -51,12 +36,26 @@ public class Practice {
         }
     }
 
+    private static void selectionSort(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            int min = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[min]) {
+                    min = j;
+                }
+            }
+            int temp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = temp;
+        }
+    }
+
     private static int binarySearch(int[] arr, int find, int min, int max) {
         int mid = (min + max) / 2;
 
         if (arr[mid] == find) {
             return mid;
-        } else if (arr[mid] > find) {
+        } else if (arr[mid] < find) {
             return binarySearch(arr, find, mid + 1, max);
         } else {
             return binarySearch(arr, find, min, mid - 1);
@@ -70,7 +69,7 @@ public class Practice {
             int mid = (min + max) / 2;
             if (arr[mid] == find) {
                 return mid;
-            } else if (arr[mid] > find) {
+            } else if (arr[mid] < find) {
                 min = mid + 1;
             } else {
                 max = mid - 1;
@@ -87,35 +86,6 @@ public class Practice {
         }
         return -1;
     }
-
-    // private static void insertionSort(int[] num) {
-    // for (int i = 1; i < num.length; i++) {
-    // int min = num[i];
-    // int j = i;
-    // while (j >= 0 && num[j - 1] > min) {
-    // num[j] = num[j - 1];
-    // j--;
-    // }
-    // num[j] = min;
-
-    // }
-    // }
-
-    // private static void selectionSort(int[] arr) {
-    // for (int i = 0; i < arr.length; i++) {
-    // int min = 0;
-
-    // for (int j = i + 1; j < arr.length; j++) {
-    // if (arr[j] < arr[min]) {
-    // min = j;
-    // }
-    // }
-
-    // int temp = arr[i];
-    // arr[i] = arr[min];
-    // arr[min] = temp;
-    // }
-    // }
 
     private static void print(int[] arr) {
         for (int i : arr) {
