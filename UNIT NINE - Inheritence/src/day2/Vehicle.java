@@ -15,4 +15,8 @@ public class Vehicle {
     public void describe() {
         System.out.println("This is a " + type);
     }
+
+    public String toString() {
+        return "This is a " + type + ". ";
+    }
 }

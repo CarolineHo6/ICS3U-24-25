@@ -9,5 +9,7 @@ public class Main {
 
         System.out.println("Calling describe():");
         car.describe();
+
+        System.out.println(car);
     }
 }

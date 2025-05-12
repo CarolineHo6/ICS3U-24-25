@@ -18,4 +18,8 @@ public class Car extends Vehicle {
         super.describe(); // Calls Vehicle's describe method
         System.out.println("Model: " + model);
     }
+
+    public String toString() {
+        return super.toString() + " Model: " + model;
+    }
 }
